@@ -13,6 +13,9 @@ public class ClawMovement : MonoBehaviour
     public bool grab = false;
     public float verticalPos = 3.5f;
 
+    public Slider rotation;
+    SpriteRenderer spriteRenderer;
+
     public AnimationCurve curve;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -20,6 +23,9 @@ public class ClawMovement : MonoBehaviour
         movement.maxValue = farRight;
         movement.minValue = farLeft;
         movement.value = 0;
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        rotation.maxValue = 720;
+        rotation.minValue = 0;
         
     }
 
@@ -33,11 +39,15 @@ public class ClawMovement : MonoBehaviour
 
             if (t > 1f)
             {
-                grab = false;
+                grab = false; 
                 verticalPos = 3.5f;
             }
 
         }
+        Vector3 rotatePos = Vector3.zero;
+        rotatePos.y = rotation.value;
+        transform.eulerAngles = rotatePos;
+
 
         Vector2 horizontalPos = new Vector2(movement.value, verticalPos);
         transform.localPosition = horizontalPos;
