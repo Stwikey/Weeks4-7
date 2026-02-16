@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 389489617190378930}
   - component: {fileID: 8841001152692868294}
+  - component: {fileID: 7032675182648512621}
   m_Layer: 0
   m_Name: BluePresent
   m_TagString: Untagged
@@ -87,3 +88,15 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &7032675182648512621
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7564574064579145025}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94f1b560888d7144d964e64c49cd69dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

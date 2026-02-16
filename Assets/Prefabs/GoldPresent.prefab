@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3737591414937490052}
   - component: {fileID: 5273314314224111043}
+  - component: {fileID: 2416827044638676304}
   m_Layer: 0
   m_Name: GoldPresent
   m_TagString: Untagged
@@ -87,3 +88,15 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &2416827044638676304
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3806916024279676892}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94f1b560888d7144d964e64c49cd69dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
