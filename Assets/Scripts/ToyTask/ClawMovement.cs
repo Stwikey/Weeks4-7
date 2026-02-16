@@ -12,13 +12,15 @@ public class ClawMovement : MonoBehaviour
     public float t = 0f;
     public bool grab = false;
     public float verticalPos = 3.5f;
+
+    public AnimationCurve curve;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         movement.maxValue = farRight;
         movement.minValue = farLeft;
         movement.value = 0;
-
+        
     }
 
     // Update is called once per frame
@@ -27,7 +29,7 @@ public class ClawMovement : MonoBehaviour
         if (grab)
         {
             t += Time.deltaTime;
-            verticalPos = Mathf.Lerp(topPos, bottomPos, t);
+            verticalPos = Mathf.Lerp(topPos, bottomPos, curve.Evaluate(t));
 
             if (t > 1f)
             {
