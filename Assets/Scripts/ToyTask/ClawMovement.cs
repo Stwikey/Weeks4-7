@@ -17,6 +17,9 @@ public class ClawMovement : MonoBehaviour
     SpriteRenderer spriteRenderer;
 
     public AnimationCurve curve;
+    public GameObject presentSpawner;
+
+    public SpawnPresents spawnerScript;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -26,6 +29,7 @@ public class ClawMovement : MonoBehaviour
         spriteRenderer = GetComponent<SpriteRenderer>();
         rotation.maxValue = 720;
         rotation.minValue = 0;
+        spawnerScript = presentSpawner.GetComponent<SpawnPresents>();
         
     }
 
@@ -39,6 +43,11 @@ public class ClawMovement : MonoBehaviour
 
             if (t > 1f)
             {
+                if (spawnerScript != null)
+                {
+                    spawnerScript.Spawn();
+                }
+
                 grab = false; 
                 verticalPos = 3.5f;
             }
